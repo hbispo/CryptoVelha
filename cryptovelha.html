@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CryptoVelha</title>
+<script src="cryptovelha.js"></script>
+</head>
+<body>
+<table style="background-color:#000">
+<tr>
+	<td id="x1y1" style="cursor:pointer;border-bottom:solid 5px green;border-right:solid 5px green;padding:10px;">
+		<table>
+		<tr>
+			<td id="x1y1xx1yy1" style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;" onclick="clique(this,1,1,1,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,1,1,2,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-left:solid white;" onclick="clique(this,1,1,3,1)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-right:solid white;" onclick="clique(this,1,1,1,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border:solid white;" onclick="clique(this,1,1,2,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-left:solid white;" onclick="clique(this,1,1,3,2)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;" onclick="clique(this,1,1,1,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,1,1,2,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-left:solid white;" onclick="clique(this,1,1,3,3)"></td>
+		</tr>
+		</table>
+	</td>
+	<td id="x2y1" style="cursor:pointer;border-bottom:solid 5px green;border-right:solid 5px green;border-left:solid 5px green;padding:10px;">
+		<table>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;" onclick="clique(this,2,1,1,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,2,1,2,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-left:solid white;" onclick="clique(this,2,1,3,1)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-right:solid white;" onclick="clique(this,2,1,1,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border:solid white;" onclick="clique(this,2,1,2,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-left:solid white;" onclick="clique(this,2,1,3,2)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;" onclick="clique(this,2,1,1,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,2,1,2,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-left:solid white;" onclick="clique(this,2,1,3,3)"></td>
+		</tr>
+		</table>
+	</td>
+	<td id="x3y1" style="cursor:pointer;border-bottom:solid 5px green;border-left:solid 5px green;padding:10px;">
+		<table>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;" onclick="clique(this,3,1,1,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,3,1,2,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-left:solid white;" onclick="clique(this,3,1,3,1)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-right:solid white;" onclick="clique(this,3,1,1,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border:solid white;" onclick="clique(this,3,1,2,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-left:solid white;" onclick="clique(this,3,1,3,2)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;" onclick="clique(this,3,1,1,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,3,1,2,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-left:solid white;" onclick="clique(this,3,1,3,3)"></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td id="x1y2" style="cursor:pointer;border-bottom:solid 5px green;border-top:solid 5px green;border-right:solid 5px green;padding:10px;">
+		<table>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;" onclick="clique(this,1,2,1,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,1,2,2,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-left:solid white;" onclick="clique(this,1,2,3,1)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-right:solid white;" onclick="clique(this,1,2,1,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border:solid white;" onclick="clique(this,1,2,2,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-left:solid white;" onclick="clique(this,1,2,3,2)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;" onclick="clique(this,1,2,1,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,1,2,2,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-left:solid white;" onclick="clique(this,1,2,3,3)"></td>
+		</tr>
+		</table>
+	</td>
+	<td id="x2y2" style="cursor:pointer;border:solid 5px green;padding:10px;">
+		<table>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;" onclick="clique(this,2,2,1,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,2,2,2,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-left:solid white;" onclick="clique(this,2,2,3,1)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-right:solid white;" onclick="clique(this,2,2,1,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border:solid white;" onclick="clique(this,2,2,2,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-left:solid white;" onclick="clique(this,2,2,3,2)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;" onclick="clique(this,2,2,1,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,2,2,2,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-left:solid white;" onclick="clique(this,2,2,3,3)"></td>
+		</tr>
+		</table>
+	</td>
+	<td id="x3y2" style="cursor:pointer;border-bottom:solid 5px green;border-top:solid 5px green;border-left:solid 5px green;padding:10px;">
+		<table>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;" onclick="clique(this,3,2,1,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,3,2,2,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-left:solid white;" onclick="clique(this,3,2,3,1)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-right:solid white;" onclick="clique(this,3,2,1,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border:solid white;" onclick="clique(this,3,2,2,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-left:solid white;" onclick="clique(this,3,2,3,2)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;" onclick="clique(this,3,2,1,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,3,2,2,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-left:solid white;" onclick="clique(this,3,2,3,3)"></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td id="x1y3" style="cursor:pointer;border-top:solid 5px green;border-right:solid 5px green;padding:10px;">
+		<table>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;" onclick="clique(this,1,3,1,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,1,3,2,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-left:solid white;" onclick="clique(this,1,3,3,1)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-right:solid white;" onclick="clique(this,1,3,1,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border:solid white;" onclick="clique(this,1,3,2,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-left:solid white;" onclick="clique(this,1,3,3,2)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;" onclick="clique(this,1,3,1,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,1,3,2,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-left:solid white;" onclick="clique(this,1,3,3,3)"></td>
+		</tr>
+		</table>
+	</td>
+	<td id="x2y3" style="cursor:pointer;border-top:solid 5px green;border-right:solid 5px green;border-left:solid 5px green;padding:10px;">
+		<table>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;" onclick="clique(this,2,3,1,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,2,3,2,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-left:solid white;" onclick="clique(this,2,3,3,1)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-right:solid white;" onclick="clique(this,2,3,1,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border:solid white;" onclick="clique(this,2,3,2,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-left:solid white;" onclick="clique(this,2,3,3,2)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;" onclick="clique(this,2,3,1,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,2,3,2,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-left:solid white;" onclick="clique(this,2,3,3,3)"></td>
+		</tr>
+		</table>
+	</td>
+	<td id="x3y3" style="cursor:pointer;border-top:solid 5px green;border-left:solid 5px green;padding:10px;">
+		<table>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;" onclick="clique(this,3,3,1,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,3,3,2,1)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-left:solid white;" onclick="clique(this,3,3,3,1)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-right:solid white;" onclick="clique(this,3,3,1,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border:solid white;" onclick="clique(this,3,3,2,2)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-bottom:solid white;border-top:solid white;border-left:solid white;" onclick="clique(this,3,3,3,2)"></td>
+		</tr>
+		<tr>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;" onclick="clique(this,3,3,1,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-right:solid white;border-left:solid white;" onclick="clique(this,3,3,2,3)"></td>
+			<td style="font-size:40px;text-align:center;width:50px;height:50px;border-top:solid white;border-left:solid white;" onclick="clique(this,3,3,3,3)"></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<p id="jogadordiv" style="font-size:18px;font-family:Calibri;">Jogador atual: <span style="color:#FF0">●</span></p> 
+<input type="button" value="Desfazer" onclick="desfazer()">
+</body>
+</html>
