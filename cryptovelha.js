@@ -1,59 +1,125 @@
-atual = 'FF0';
+current = 'FF0';
+choice = false;
+
 last = null;
+lastobx = null;
+lastoby = null;
+
 obx = 0;
 oby = 0;
 
-function clique(cell,x,y,xx,yy) {
-	if((obx!=0 || oby!=0) && (x!=obx || y!=oby))
-		return;
-	
-	if(cell.innerHTML != '')
-		return;
-	
-	last = cell;
-	var jogador = document.getElementById('jogadordiv').childNodes[1].cloneNode(true);
-	cell.appendChild(jogador);
-	
-	
-	
-	if(atual == 'FF0')
-		atual = 'e01839';
-	else
-		atual = 'FF0';
-	
-	document.getElementById('jogadordiv').childNodes[1].setAttribute("style","color:#"+atual);
-	
-	obx = xx;
-	oby = yy;
-	document.getElementById('x1y1').style.backgroundColor = '';
-	document.getElementById('x2y1').style.backgroundColor = '';
-	document.getElementById('x3y1').style.backgroundColor = '';
-	document.getElementById('x1y2').style.backgroundColor = '';
-	document.getElementById('x2y2').style.backgroundColor = '';
-	document.getElementById('x3y2').style.backgroundColor = '';
-	document.getElementById('x1y3').style.backgroundColor = '';
-	document.getElementById('x2y3').style.backgroundColor = '';
-	document.getElementById('x3y3').style.backgroundColor = '';
-	document.getElementById('x1y1').style.cursor = 'default';
-	document.getElementById('x2y1').style.cursor = 'default';
-	document.getElementById('x3y1').style.cursor = 'default';
-	document.getElementById('x1y2').style.cursor = 'default';
-	document.getElementById('x2y2').style.cursor = 'default';
-	document.getElementById('x3y2').style.cursor = 'default';
-	document.getElementById('x1y3').style.cursor = 'default';
-	document.getElementById('x2y3').style.cursor = 'default';
-	document.getElementById('x3y3').style.cursor = 'default';
-	document.getElementById('x'+xx+'y'+yy).style.backgroundColor = 'gray';
-	document.getElementById('x'+xx+'y'+yy).style.cursor = 'pointer';
+function movement(cell, x, y, xx, yy) {
+    if(choice == true){
+        choose(x,y);
+        return;
+    }
+
+    if ((obx != 0 || oby != 0) && (x != obx || y != oby))
+        return;
+
+    if (cell.innerHTML != '')
+        return;
+    
+    last = cell;
+    lastobx = obx;
+    lastoby = oby;
+    
+    cell.appendChild(playerDot());
+    
+    if(isFull(xx,yy)){
+        choice = true;
+        alert("Este quadrante está cheio, por favor escolha um com espaços para o próximo jogador.");
+        
+        obx = 0;
+        oby = 0;
+        
+        paintBoard(0,0);
+        
+        return;
+    }
+
+    obx = xx;
+    oby = yy;
+
+    changePlayer();
+    
+    paintBoard(obx,oby);
+}
+
+function choose(x,y){
+    choice = false;
+    
+    changePlayer();
+
+    obx = x;
+    oby = y;
+        
+    paintBoard(obx,oby);
+}
+
+function playerDot(){
+    return document.getElementById('playerdiv').childNodes[1].cloneNode(true);
+}
+
+function isFull(x,y){
+    var area = document.getElementById('x'+x+'y'+y);
+    
+    for(var i = 0; i <= 4; i = i+2)
+        for(var j = 1; j <= 5; j = j+2)
+            if(area.childNodes[1].childNodes[1].childNodes[i].childNodes[j].innerHTML == "")
+                return false;
+    
+    return true;
+}
+
+function changePlayer(){
+    if (current == 'FF0')
+        current = 'e01839';
+    else
+        current = 'FF0';
+
+    document.getElementById('playerdiv').childNodes[1].setAttribute("style", "color:#" + current);
+}
+
+function paintArea(x,y){
+    document.getElementById('x' + x + 'y' + y).style.backgroundColor = 'gray';
+    document.getElementById('x' + x + 'y' + y).style.cursor = 'pointer';
+}
+
+function resetArea(x,y){
+    document.getElementById('x'+x+'y'+y).style.backgroundColor = '';
+    document.getElementById('x'+x+'y'+y).style.cursor = 'default';
+}
+
+function resetBoard(){
+    resetArea(1,1);
+    resetArea(2,1);
+    resetArea(3,1);
+    
+    resetArea(1,2);
+    resetArea(2,2);
+    resetArea(3,2);
+    
+    resetArea(1,3);
+    resetArea(2,3);
+    resetArea(3,3);
+}
+
+function paintBoard(x,y){
+    resetBoard();
+    if(x > 0 && y > 0)
+        paintArea(x,y);
 }
 
 function desfazer() {
-	if(atual == 'FF0')
-		atual = 'e01839';
-	else
-		atual = 'FF0';
-	
-	document.getElementById('jogador').setAttribute("style","color:#"+atual);
-	
-	last.innerHTML = '';
+    if(last == null)
+        return;
+    
+    obx = lastobx;
+    oby = lastoby;
+    
+    changePlayer();
+
+    last.innerHTML = '';
+    paintBoard(obx,oby);
 }
