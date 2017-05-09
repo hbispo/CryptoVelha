@@ -47,6 +47,9 @@ function movement(cell, x, y, xx, yy) {
 }
 
 function choose(x,y){
+    if(isFull(x,y))
+        return;
+    
     choice = false;
     
     changePlayer();
@@ -109,6 +112,28 @@ function paintBoard(x,y){
     resetBoard();
     if(x > 0 && y > 0)
         paintArea(x,y);
+    else{
+        if(!isFull(1,1))
+            paintArea(1,1);
+        if(!isFull(2,1))
+            paintArea(2,1);
+        if(!isFull(3,1))
+            paintArea(3,1);
+        
+        if(!isFull(1,2))
+            paintArea(1,2);
+        if(!isFull(2,2))
+            paintArea(2,2);
+        if(!isFull(3,2))
+            paintArea(3,2);
+        
+        if(!isFull(1,3))
+            paintArea(1,3);
+        if(!isFull(2,3))
+            paintArea(2,3);
+        if(!isFull(3,1))
+            paintArea(3,3);
+    }
 }
 
 function desfazer() {
