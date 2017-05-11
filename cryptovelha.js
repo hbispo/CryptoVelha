@@ -167,11 +167,11 @@ function paintVictory(x,y,xx,yy){
 function paintEnd(x,y){
     
     var lin = false;
-    if(game[x][1] == game[x][2] && game[x][2] == game[x][3])
+    if(game[1][y] == game[2][y] && game[2][y] == game[3][y])
         lin = true;
     
     var col = false;
-    if(game[1][y] == game[2][y] && game[2][y] == game[3][y])
+    if(game[x][1] == game[x][2] && game[x][2] == game[x][3])
         col = true;
     
     var dd = false;
